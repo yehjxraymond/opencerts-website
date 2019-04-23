@@ -10,5 +10,6 @@ module.exports = {
       "<rootDir>/_mocks_/fileMock.js",
     "\\.(css|sass|scss)$": "<rootDir>/_mocks_/styleMock.js"
   },
+  coverageReporters: ["lcov"],
   testResultsProcessor: "jest-sonar-reporter"
 };
