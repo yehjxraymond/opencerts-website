@@ -7,17 +7,14 @@ addons:
     organization: "opencerts"
 jobs:
   include:
-    - stage: sonar
-      script:
-        - sonar-scanner
     - stage: test
       script:
         - npm run lint
         - npm run test
+        - sonar-scanner
     - stage: integration
       script:
         - npm run integration:headless
 stages:
   - test
-  - sonar
   - integration
